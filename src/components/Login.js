@@ -6,16 +6,16 @@ const Login = () => {
     <Container>
       <Content>
         <CTA>
-          <CtaLogoOne />
+          <CtaLogoOne/>
           <SignUp>GET ALL THERE</SignUp>
           <Description>
             Get Premier Access to Raya and the Last Dragon for an additional fee
             with Disney+ subscription. As of 03/26/24, the price of Disney+ and
             The Disney Bundle will increase by $1.
           </Description>
-          <CtaLogoTwo />
+          <CtaLogoTwo/>
         </CTA>
-        <BgImage />
+        <BgImage/>
       </Content>
     </Container>
   );
@@ -24,7 +24,7 @@ const Login = () => {
 export default Login;
 
 const Container = styled.section`
-  overflow: hidden;
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
   text-align: center;
