@@ -9,7 +9,7 @@ import {
   selectUserPhoto,
   setSignOutState,
   setUserLoginDetails,
-} from "../fatures/user/userSlice";
+} from "../features/user/userSlice";
 import { useEffect } from "react";
 
 const Header = () => {
