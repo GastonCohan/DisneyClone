@@ -101,10 +101,6 @@ const Header = () => {
               <img src={seriesIcon} alt="Series" />
               <span>SERIE</span>
             </a>
-            <a>
-              <img src={seriesIcon} alt="Series" />
-              <span>PRUEBA</span>
-            </a>
           </NavMenu>
           <SignOut> 
             <UserImg src={userphoto} alt={username} />
