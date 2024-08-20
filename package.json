@@ -2,7 +2,7 @@
   "name": "disney-clone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gastoncohan.github.io/DisneyClone2",
+  "homepage": "https://gastoncohan.github.io/DisneyClone",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
