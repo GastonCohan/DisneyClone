@@ -99,7 +99,7 @@ const Header = () => {
             </a>
             <a>
               <img src={seriesIcon} alt="Series" />
-              <span>SERIES</span>
+              <span>SERIE</span>
             </a>
             <a>
               <img src={seriesIcon} alt="Series" />
