@@ -9,7 +9,7 @@ import {
   setSignOutState,
   setUserLoginDetails,
 } from "../features/user/userSlice";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import logo from '../assets/logo.svg';
 import homeIcon from '../assets/home-icon.svg';
 import searchIcon from '../assets/search-icon.svg';
@@ -24,14 +24,23 @@ const Header = () => {
   const userphoto = useSelector(selectUserPhoto);
   const navigate = useNavigate();
 
+  const setUser = useCallback((user) => {
+    dispatch(
+      setUserLoginDetails({
+        name: user.displayName,
+        email: user.email,
+        photo: user.photoURL,
+      })
+    );
+  });
+
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
       if (user) {
         setUser(user);
-        navigate('/home');
       }
     });
-  }, [username, navigate]);
+  }, [username, navigate, setUser]);
 
   const handleAuth = () => {
     if (!username) {
@@ -39,6 +48,7 @@ const Header = () => {
       signInWithPopup(auth, provider)
         .then((result) => {
           setUser(result.user);
+          navigate('/home')
         })
         .catch((error) => {
           alert(error.message);
@@ -52,15 +62,9 @@ const Header = () => {
     }
   };
 
-  const setUser = (user) => {
-    dispatch(
-      setUserLoginDetails({
-        name: user.displayName,
-        email: user.email,
-        photo: user.photoURL,
-      })
-    );
-  };
+ 
+
+  console.log('username', username)
 
   return (
     <Nav>
@@ -73,27 +77,27 @@ const Header = () => {
       ) : (
         <>
           <NavMenu>
-            <a href="home">
+            <a href="home" onClick={() => navigate('/home')}>
               <img src={homeIcon} alt="Home" />
               <span>HOME</span>
             </a>
-            <a href="home">
+            <a>
               <img src={searchIcon} alt="Search" />
               <span>SEARCH</span>
             </a>
-            <a href="home">
+            <a>
               <img src={watchlistIcon} alt="Watchlist" />
               <span>WATCHLIST</span>
             </a>
-            <a href="home">
+            <a>
               <img src={originalIcon} alt="Originals" />
               <span>ORIGINALS</span>
             </a>
-            <a href="home">
+            <a>
               <img src={movieIcon} alt="Movies" />
               <span>MOVIES</span>
             </a>
-            <a href="home">
+            <a>
               <img src={seriesIcon} alt="Series" />
               <span>SERIES</span>
             </a>
@@ -154,6 +158,7 @@ const NavMenu = styled.div`
     align-items: center;
     padding: 0 12px;
     z-index: auto;
+    cursor: pointer;
 
     img {
       height: 20px;
