@@ -1,21 +1,24 @@
 import React from "react";
 import styled from "styled-components";
+import ctaLogoOne from '../assets/cta-logo-one.png';
+import ctaLogoTwo from '../assets/cta-logo-two.png';
+import loginBackground from '../assets/login-background.jpg';
 
 const Login = () => {
   return (
     <Container>
       <Content>
         <CTA>
-          <CtaLogoOne/>
+          <CtaLogoOne />
           <SignUp>GET ALL THERE</SignUp>
           <Description>
             Get Premier Access to Raya and the Last Dragon for an additional fee
             with Disney+ subscription. As of 03/26/24, the price of Disney+ and
             The Disney Bundle will increase by $1.
           </Description>
-          <CtaLogoTwo/>
+          <CtaLogoTwo />
         </CTA>
-        <BgImage/>
+        <BgImage />
       </Content>
     </Container>
   );
@@ -46,7 +49,7 @@ const Content = styled.div`
 `;
 
 const BgImage = styled.div`
-  background-image: url("/assets/login-background.jpg");
+  background-image: url(${loginBackground});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,7 +83,7 @@ const CtaLogoOne = styled.div`
   max-width: 600px;
   width: 100%;
   height: 150px;
-  background-image: url("../../assets/cta-logo-one.png");
+  background-image: url(${ctaLogoOne});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -91,7 +94,7 @@ const CtaLogoTwo = styled.div`
   max-width: 600px;
   width: 100%;
   height: 150px;
-  background-image: url("../../assets/cta-logo-two.png");
+  background-image: url(${ctaLogoTwo});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

@@ -3,6 +3,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styled from "styled-components";
+import badag from '../assets/slider-badag.jpg';
+import badging from '../assets/slider-badging.jpg';
+import scale from '../assets/slider-scale.jpg';
+import scales from '../assets/slider-scales.jpg';
 
 const ImgSlider = () => {
   let settings = {
@@ -18,22 +22,22 @@ const ImgSlider = () => {
     <Carousel {...settings}>
       <Wrap>
         <a>
-          <img src="/assets/slider-badag.jpg" alt="" />
+        <img src={badag} alt="badag" />
         </a>
       </Wrap>
       <Wrap>
         <a>
-          <img src="/assets/slider-badging.jpg" alt="" />
+        <img src={badging} alt="badging" />
         </a>
       </Wrap>
       <Wrap>
         <a>
-          <img src="/assets/slider-scale.jpg" alt="" />
+        <img src={scale} alt="scale" />
         </a>
       </Wrap>
       <Wrap>
         <a>
-          <img src="/assets/slider-scales.jpg" alt="" />
+        <img src={scales} alt="scales" />
         </a>
       </Wrap>
     </Carousel>

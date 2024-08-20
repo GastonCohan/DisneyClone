@@ -17,9 +17,9 @@ const Recommends = () => {
           return (
             <Wrap key={index}>
               {movie ? (
-                <Link to={"/detail/" + movie.id}>
-                  <img src={movie.cardImg} alt={movie.title} />
-                </Link>
+               <Link to={`/detail/${movie.id}`} onClick={() => console.log('hola', movie.id)}>
+               <img src={movie.cardImg} alt={movie.title} />
+             </Link>
               ) : (
                 <SpinnerOverlay>
                   <Spinner />
