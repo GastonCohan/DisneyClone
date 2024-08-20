@@ -3,6 +3,11 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import db from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
+<<<<<<< HEAD
+=======
+import playiconwhite from '../assets/play-icon-white.png';
+import playiconblack from '../assets/play-icon-black.png';
+>>>>>>> gh-pages
 
 const Detail = (props) => {
   const { id } = useParams();
@@ -37,11 +42,19 @@ const Detail = (props) => {
       <ContentMeta>
         <Controls>
           <Player>
+<<<<<<< HEAD
             <img src="/assets/play-icon-black.png" alt="" />
             <span>Play</span>
           </Player>
           <Trailer>
             <img src="/assets/play-icon-white.png" alt="" />
+=======
+          <img src={playiconblack} alt="blackPlay" />
+            <span>Play</span>
+          </Player>
+          <Trailer>
+          <img src={playiconwhite} alt="whitePlay" />
+>>>>>>> gh-pages
             <span>Trailer</span>
           </Trailer>
           <AddList>

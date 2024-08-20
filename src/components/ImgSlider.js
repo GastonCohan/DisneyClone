@@ -3,6 +3,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styled from "styled-components";
+<<<<<<< HEAD
+=======
+import badag from '../assets/slider-badag.jpg';
+import badging from '../assets/slider-badging.jpg';
+import scale from '../assets/slider-scale.jpg';
+import scales from '../assets/slider-scales.jpg';
+>>>>>>> gh-pages
 
 const ImgSlider = () => {
   let settings = {
@@ -18,22 +25,38 @@ const ImgSlider = () => {
     <Carousel {...settings}>
       <Wrap>
         <a>
+<<<<<<< HEAD
           <img src="/assets/slider-badag.jpg" alt="" />
+=======
+        <img src={badag} alt="badag" />
+>>>>>>> gh-pages
         </a>
       </Wrap>
       <Wrap>
         <a>
+<<<<<<< HEAD
           <img src="/assets/slider-badging.jpg" alt="" />
+=======
+        <img src={badging} alt="badging" />
+>>>>>>> gh-pages
         </a>
       </Wrap>
       <Wrap>
         <a>
+<<<<<<< HEAD
           <img src="/assets/slider-scale.jpg" alt="" />
+=======
+        <img src={scale} alt="scale" />
+>>>>>>> gh-pages
         </a>
       </Wrap>
       <Wrap>
         <a>
+<<<<<<< HEAD
           <img src="/assets/slider-scales.jpg" alt="" />
+=======
+        <img src={scales} alt="scales" />
+>>>>>>> gh-pages
         </a>
       </Wrap>
     </Carousel>

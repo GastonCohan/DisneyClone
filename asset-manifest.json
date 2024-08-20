@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/DisneyClone/static/css/main.7bb55f01.css",
+    "main.js": "/DisneyClone/static/js/main.dd5195d6.js",
+    "static/js/453.42c78e3b.chunk.js": "/DisneyClone/static/js/453.42c78e3b.chunk.js",
+    "static/media/slick.svg": "/DisneyClone/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/DisneyClone/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/DisneyClone/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/DisneyClone/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/DisneyClone/index.html",
+    "main.7bb55f01.css.map": "/DisneyClone/static/css/main.7bb55f01.css.map",
+    "main.dd5195d6.js.map": "/DisneyClone/static/js/main.dd5195d6.js.map",
+    "453.42c78e3b.chunk.js.map": "/DisneyClone/static/js/453.42c78e3b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bb55f01.css",
+    "static/js/main.dd5195d6.js"
+  ]
+}
