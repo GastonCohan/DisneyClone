@@ -5,17 +5,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import {
   selectUserName,
-<<<<<<< HEAD
-  // selectUserEmail,
-=======
->>>>>>> gh-pages
   selectUserPhoto,
   setSignOutState,
   setUserLoginDetails,
 } from "../features/user/userSlice";
-<<<<<<< HEAD
-import { useEffect } from "react";
-=======
 import { useCallback, useEffect } from "react";
 import logo from '../assets/logo.svg';
 import homeIcon from '../assets/home-icon.svg';
@@ -24,52 +17,14 @@ import watchlistIcon from '../assets/watchlist-icon.svg';
 import originalIcon from '../assets/original-icon.svg';
 import movieIcon from '../assets/movie-icon.svg';
 import seriesIcon from '../assets/series-icon.svg';
->>>>>>> gh-pages
 
 const Header = () => {
   const dispatch = useDispatch();
   const username = useSelector(selectUserName);
-<<<<<<< HEAD
-  // const useremail = useSelector(selectUserEmail);
-  const userphoto = useSelector(selectUserPhoto);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    auth.onAuthStateChanged(async (user) => {
-      if(user) {
-        setUser(user)
-        navigate('/home')
-      }
-    })
-  }, [username])
-
-
-  const handleAuth = () => {
-    if(!username){
-      const auth = getAuth();
-      signInWithPopup(auth, provider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        alert(error.message);
-      });
-    } else {
-      auth.signOut().then(() =>{
-        dispatch(setSignOutState())
-        navigate("/");
-      })
-      .catch((err) => alert(err.message))
-    }
-  };
-
-  const setUser = (user) => {
-=======
   const userphoto = useSelector(selectUserPhoto);
   const navigate = useNavigate();
 
   const setUser = useCallback((user) => {
->>>>>>> gh-pages
     dispatch(
       setUserLoginDetails({
         name: user.displayName,
@@ -77,14 +32,6 @@ const Header = () => {
         photo: user.photoURL,
       })
     );
-<<<<<<< HEAD
-  };
-
-  return (
-    <Nav>
-      <Logo>
-        <img src="/assets/logo.svg" alt="Disney" />
-=======
   });
 
   useEffect(() => {
@@ -123,7 +70,6 @@ const Header = () => {
     <Nav>
       <Logo>
         <img src={logo} alt="Disney" />
->>>>>>> gh-pages
       </Logo>
 
       {!username ? (
@@ -131,30 +77,6 @@ const Header = () => {
       ) : (
         <>
           <NavMenu>
-<<<<<<< HEAD
-            <a href="home">
-              <img src="/assets/home-icon.svg" alt="Home" />
-              <span>HOME</span>
-            </a>
-            <a href="home">
-              <img src="/assets/search-icon.svg" alt="Search" />
-              <span>SEARCH</span>
-            </a>
-            <a href="home">
-              <img src="/assets/watchlist-icon.svg" alt="Watchlist" />
-              <span>WATCHLIST</span>
-            </a>
-            <a href="home">
-              <img src="/assets/original-icon.svg" alt="Originals" />
-              <span>ORIGINALS</span>
-            </a>
-            <a href="home">
-              <img src="/assets/movie-icon.svg" alt="Movies" />
-              <span>MOVIES</span>
-            </a>
-            <a href="home">
-              <img src="/assets/series-icon.svg" alt="Series" />
-=======
             <a href="home" onClick={() => navigate('/home')}>
               <img src={homeIcon} alt="Home" />
               <span>HOME</span>
@@ -177,18 +99,12 @@ const Header = () => {
             </a>
             <a>
               <img src={seriesIcon} alt="Series" />
->>>>>>> gh-pages
               <span>SERIES</span>
             </a>
           </NavMenu>
           <SignOut> 
-<<<<<<< HEAD
-          <UserImg src={userphoto} alt={username} />
-          <DropDown onClick={handleAuth}>Sign Out</DropDown>
-=======
             <UserImg src={userphoto} alt={username} />
             <DropDown onClick={handleAuth}>Sign Out</DropDown>
->>>>>>> gh-pages
           </SignOut>
         </>
       )}
@@ -242,10 +158,7 @@ const NavMenu = styled.div`
     align-items: center;
     padding: 0 12px;
     z-index: auto;
-<<<<<<< HEAD
-=======
     cursor: pointer;
->>>>>>> gh-pages
 
     img {
       height: 20px;
@@ -289,15 +202,9 @@ const NavMenu = styled.div`
     }
   }
 
-<<<<<<< HEAD
-  // @media (max-width: 768px) {
-  //   display: none;
-  // }
-=======
    @media (max-width: 908px) {
      display: none;
    } 
->>>>>>> gh-pages
 `;
 
 const Login = styled.a`
@@ -321,44 +228,6 @@ const UserImg = styled.img`
 `;
 
 const DropDown = styled.div`
-<<<<<<< HEAD
-position: absolute;
-top: 48px;
-right: 0px;
-background-color: rgb(19,19,19);
-border: 1px solid rgba(151,151,151, 0.34);
-border-radius: 4px;
-box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
-padding: 10px;
-font-size: 14px;
-letter-spacing: 3px;
-width: 100px;
-opacity: 0;
-`
-
-const SignOut = styled.div`
-position: relative;
-height: 48px;
-width: 48px;
-display: flex;
-cursor: pointer;
-align-items: center;
-justify-content: center;
-
-${UserImg} {
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-}
-
-&:hover {
-  ${DropDown} {
-    opacity: 1;
-    transition-duration: 1s;
-  }
-}
-`
-=======
   position: absolute;
   top: 48px;
   right: 0px;
@@ -395,6 +264,5 @@ const SignOut = styled.div`
     }
   }
 `;
->>>>>>> gh-pages
 
 export default Header;

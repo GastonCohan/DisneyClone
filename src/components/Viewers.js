@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-<<<<<<< HEAD
-=======
 import disneyImage from '../assets/viewers-disney.png';
 import marvelImage from '../assets/viewers-marvel.png';
 import nationalImage from '../assets/viewers-national.png';
@@ -12,44 +10,11 @@ import marvelVideo from '../videos/1564676115-marvel.mp4';
 import nationalVideo from '../videos/1564676296-national-geographic.mp4';
 import starwarsVideo from '../videos/1608229455-star-wars.mp4';
 import pixarVideo from '../videos/1564676714-pixar.mp4';
->>>>>>> gh-pages
 
 const Viewers = () => {
   return (
     <Container>
       <Wrap>
-<<<<<<< HEAD
-        <img src="/assets/viewers-disney.png" alt="disney" />
-        <video autoPlay={true} loop={true} playsInline={true} muted>
-          <source src="/videos/1564674844-disney.mp4" type="video/mp4" />
-        </video>
-      </Wrap>
-      <Wrap>
-        <img src="/assets/viewers-marvel.png" alt="marvel" />
-        <video autoPlay={true} loop={true} playsInline={true} muted>
-          <source src="/videos/1564676115-marvel.mp4" type="video/mp4" />
-        </video>
-      </Wrap>
-      <Wrap>
-        <img src="/assets/viewers-national.png" alt="national" />
-        <video autoPlay={true} loop={true} playsInline={true} muted>
-          <source
-            src="/videos/1564676296-national-geographic.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </Wrap>
-      <Wrap>
-        <img src="/assets/viewers-starwars.png" alt="starwars" />
-        <video autoPlay={true} loop={true} playsInline={true} muted>
-          <source src="/videos/1608229455-star-wars.mp4" type="video/mp4" />
-        </video>
-      </Wrap>
-      <Wrap>
-        <img src="/assets/viewers-pixar.png" alt="pixar" />
-        <video autoPlay={true} loop={true} playsInline={true} muted>
-          <source src="/videos/1564676714-pixar.mp4" type="video/mp4" />
-=======
         <img src={disneyImage} alt="disney" />
         <video autoPlay loop playsInline muted>
           <source src={disneyVideo} type="video/mp4" />
@@ -77,7 +42,6 @@ const Viewers = () => {
         <img src={pixarImage} alt="pixar" />
         <video autoPlay loop playsInline muted>
           <source src={pixarVideo} type="video/mp4" />
->>>>>>> gh-pages
         </video>
       </Wrap>
     </Container>

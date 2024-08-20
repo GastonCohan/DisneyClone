@@ -17,15 +17,9 @@ const Recommends = () => {
           return (
             <Wrap key={index}>
               {movie ? (
-<<<<<<< HEAD
-                <Link to={"/detail/" + movie.id}>
-                  <img src={movie.cardImg} alt={movie.title} />
-                </Link>
-=======
                <Link to={`/detail/${movie.id}`}>
                <img src={movie.cardImg} alt={movie.title} />
              </Link>
->>>>>>> gh-pages
               ) : (
                 <SpinnerOverlay>
                   <Spinner />
