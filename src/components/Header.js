@@ -17,12 +17,14 @@ import watchlistIcon from "../assets/watchlist-icon.svg";
 import originalIcon from "../assets/original-icon.svg";
 import movieIcon from "../assets/movie-icon.svg";
 import seriesIcon from "../assets/series-icon.svg";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const dispatch = useDispatch();
   const username = useSelector(selectUserName);
   const userphoto = useSelector(selectUserPhoto);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const setUser = useCallback((user) => {
     dispatch(
@@ -33,6 +35,20 @@ const Header = () => {
       })
     );
   });
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user);
+        const lastPath = localStorage.getItem("lastPath") || "/home";
+        if (location.pathname === "/") {
+          navigate(lastPath);
+        }
+      }
+    });
+
+    return () => unsubscribe();
+  }, [setUser, navigate, location.pathname]);
 
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
