@@ -73,27 +73,35 @@ const Container = styled.div`
 `;
 
 const Background = styled.div`
-  left: 0px;
-  opacity: 0.8;
   position: fixed;
-  right: 0px;
-  top: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: -1;
+  overflow: hidden;
 
   img {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.8;
 
-    @media (max-width: 768px) {
-      width: initial;
+    @media (max-width: 438px) {
+      width: 100%; /* Ajusta la imagen al 100% del ancho */
+      height: 340px; /* Permite que la altura se ajuste proporcionalmente */
+      object-fit: contain; /* Asegura que toda la imagen sea visible */
     }
   }
 `;
 
+
+
+
 const ImageTitle = styled.div`
   align-items: flex-end;
   display: flex;
-  -webkit-box-pack: start;
   justify-content: flex-start;
   margin: 0px auto;
   height: 30vw;
@@ -104,9 +112,14 @@ const ImageTitle = styled.div`
   img {
     max-width: 600px;
     min-width: 200px;
-    width: 35vw;
+    width: 35vw; /* Cambiado para que se ajuste a la pantalla */
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 16px;
   }
 `;
+
 
 const ContentMeta = styled.div`
   max-width: 874px;
