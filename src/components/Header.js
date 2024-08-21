@@ -93,7 +93,7 @@ const Header = () => {
       ) : (
         <>
           <NavMenu>
-            <a href="home" onClick={() => navigate("/home")}>
+            <a href="/DisneyClone/home">
               <img src={homeIcon} alt="Home" />
               <span>HOME</span>
             </a>

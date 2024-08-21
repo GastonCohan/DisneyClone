@@ -89,9 +89,9 @@ const Background = styled.div`
     opacity: 0.8;
 
     @media (max-width: 438px) {
-      width: 100%; /* Ajusta la imagen al 100% del ancho */
-      height: 340px; /* Permite que la altura se ajuste proporcionalmente */
-      object-fit: contain; /* Asegura que toda la imagen sea visible */
+      width: 100%;
+      height: 340px;
+      object-fit: contain;
     }
   }
 `;
