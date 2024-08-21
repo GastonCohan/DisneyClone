@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import {
   selectUserName,
   selectUserPhoto,
@@ -10,13 +10,13 @@ import {
   setUserLoginDetails,
 } from "../features/user/userSlice";
 import { useCallback, useEffect } from "react";
-import logo from '../assets/logo.svg';
-import homeIcon from '../assets/home-icon.svg';
-import searchIcon from '../assets/search-icon.svg';
-import watchlistIcon from '../assets/watchlist-icon.svg';
-import originalIcon from '../assets/original-icon.svg';
-import movieIcon from '../assets/movie-icon.svg';
-import seriesIcon from '../assets/series-icon.svg';
+import logo from "../assets/logo.svg";
+import homeIcon from "../assets/home-icon.svg";
+import searchIcon from "../assets/search-icon.svg";
+import watchlistIcon from "../assets/watchlist-icon.svg";
+import originalIcon from "../assets/original-icon.svg";
+import movieIcon from "../assets/movie-icon.svg";
+import seriesIcon from "../assets/series-icon.svg";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -48,23 +48,23 @@ const Header = () => {
       signInWithPopup(auth, provider)
         .then((result) => {
           setUser(result.user);
-          navigate('/home')
+          navigate("/home");
         })
         .catch((error) => {
           alert(error.message);
         });
     } else {
-      auth.signOut().then(() => {
-        dispatch(setSignOutState());
-        navigate("/");
-      })
-      .catch((err) => alert(err.message));
+      auth
+        .signOut()
+        .then(() => {
+          dispatch(setSignOutState());
+          navigate("/");
+        })
+        .catch((err) => alert(err.message));
     }
   };
 
- 
-
-  console.log('username', username)
+  console.log("username", username);
 
   return (
     <Nav>
@@ -77,7 +77,7 @@ const Header = () => {
       ) : (
         <>
           <NavMenu>
-            <a href="home" onClick={() => navigate('/home')}>
+            <a href="home" onClick={() => navigate("/home")}>
               <img src={homeIcon} alt="Home" />
               <span>HOME</span>
             </a>
@@ -99,10 +99,10 @@ const Header = () => {
             </a>
             <a>
               <img src={seriesIcon} alt="Series" />
-              <span>SERIE</span>
+              <span>SERIES</span>
             </a>
           </NavMenu>
-          <SignOut> 
+          <SignOut>
             <UserImg src={userphoto} alt={username} />
             <DropDown onClick={handleAuth}>Sign Out</DropDown>
           </SignOut>
@@ -202,9 +202,9 @@ const NavMenu = styled.div`
     }
   }
 
-   @media (max-width: 908px) {
-     display: none;
-   } 
+  @media (max-width: 908px) {
+    display: none;
+  }
 `;
 
 const Login = styled.a`
@@ -231,8 +231,8 @@ const DropDown = styled.div`
   position: absolute;
   top: 48px;
   right: 0px;
-  background-color: rgb(19,19,19);
-  border: 1px solid rgba(151,151,151, 0.34);
+  background-color: rgb(19, 19, 19);
+  border: 1px solid rgba(151, 151, 151, 0.34);
   border-radius: 4px;
   box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
   padding: 10px;
