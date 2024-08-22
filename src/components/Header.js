@@ -40,9 +40,13 @@ const Header = () => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
         setUser(user);
-        const lastPath = localStorage.getItem("lastPath") || "/home";
         if (location.pathname === "/") {
+          const lastPath = localStorage.getItem("lastPath") || "/home";
           navigate(lastPath);
+        }
+      } else {
+        if (location.pathname !== "/") {
+          navigate("/");
         }
       }
     });
@@ -80,7 +84,9 @@ const Header = () => {
     }
   };
 
-  console.log("username", username);
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
 
   return (
     <Nav>
@@ -93,7 +99,7 @@ const Header = () => {
       ) : (
         <>
           <NavMenu>
-            <a href="/DisneyClone/home">
+            <a onClick={() => handleNavigation("/home")}>
               <img src={homeIcon} alt="Home" />
               <span>HOME</span>
             </a>

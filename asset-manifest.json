@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DisneyClone/static/css/main.7bb55f01.css",
-    "main.js": "/DisneyClone/static/js/main.f68b767d.js",
+    "main.js": "/DisneyClone/static/js/main.0a610c82.js",
     "static/js/453.42c78e3b.chunk.js": "/DisneyClone/static/js/453.42c78e3b.chunk.js",
     "static/media/1564676296-national-geographic.mp4": "/DisneyClone/static/media/1564676296-national-geographic.bf1b675d8d0beb6c25bc.mp4",
     "static/media/1608229455-star-wars.mp4": "/DisneyClone/static/media/1608229455-star-wars.90fa9f5ae993d23505b5.mp4",
@@ -31,11 +31,11 @@
     "static/media/original-icon.svg": "/DisneyClone/static/media/original-icon.d7752d89e5a5d2b6276338bea45f413b.svg",
     "static/media/home-icon.svg": "/DisneyClone/static/media/home-icon.b6a11f9b406f2f13cd82608a276428e5.svg",
     "main.7bb55f01.css.map": "/DisneyClone/static/css/main.7bb55f01.css.map",
-    "main.f68b767d.js.map": "/DisneyClone/static/js/main.f68b767d.js.map",
+    "main.0a610c82.js.map": "/DisneyClone/static/js/main.0a610c82.js.map",
     "453.42c78e3b.chunk.js.map": "/DisneyClone/static/js/453.42c78e3b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7bb55f01.css",
-    "static/js/main.f68b767d.js"
+    "static/js/main.0a610c82.js"
   ]
 }
